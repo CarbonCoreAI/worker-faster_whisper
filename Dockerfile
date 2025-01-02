@@ -44,8 +44,8 @@ RUN --mount=type=cache,target=/root/.cache/pip \
 
 # Copy and run script to fetch models
 COPY builder/fetch_models.py /fetch_models.py
-RUN python /fetch_models.py && \
-    rm /fetch_models.py
+# RUN python /fetch_models.py && \
+#     rm /fetch_models.py
 
 # Copy source code into image
 COPY src .
